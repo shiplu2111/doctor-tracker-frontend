@@ -3,6 +3,9 @@
 ## Description
 Doctor Tracker is a modern, high-performance administrative web application designed for clinic and hospital management teams. The frontend client provides hospital administrators and medical staff with a polished, accessible, and responsive user experience to manage doctors and assigned patient rosters, inspect real-time clinical workload charts, and conduct fast server-side filtered queries with pagination. Built on Next.js 16 (App Router), React 19, Tailwind CSS, TanStack Query, and Recharts.
 
+- **Live Frontend (Vercel):** https://doctor-tracker-frontend-lilac.vercel.app
+- **Live Backend API (Render):** https://doctor-tracker-backend-991a.onrender.com/api/v1
+- **API Health Check:** https://doctor-tracker-backend-991a.onrender.com/health
 - **Frontend Repository:** https://github.com/shiplu2111/doctor-tracker-frontend
 - **Backend API Repository:** https://github.com/shiplu2111/doctor-tracker-backend
 - **Demo Credentials:**
