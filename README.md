@@ -121,11 +121,11 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ### Desktop Views (1440x900)
 | Dashboard Overview | Doctors Directory |
 |---|---|
-| ![Dashboard](docs/screenshots/desktop-dashboard.png) | ![Doctors](docs/screenshots/desktop-doctors.png) |
+| ![Dashboard](public/screenshots/desktop-dashboard.png) | ![Doctors](public/screenshots/desktop-doctors.png) |
 | **Doctor Detail & Patient Roster** | **Patient Directory** |
-| ![Doctor Detail](docs/screenshots/desktop-doctor-detail.png) | ![Patients](docs/screenshots/desktop-patients.png) |
+| ![Doctor Detail](public/screenshots/desktop-doctor-detail.png) | ![Patients](public/screenshots/desktop-patients.png) |
 
 ### Mobile Views (390x844)
 | Mobile Login | Mobile Dashboard | Mobile Doctors | Mobile Patients |
 |:---:|:---:|:---:|:---:|
-| ![Mobile Login](docs/screenshots/mobile-login.png) | ![Mobile Dashboard](docs/screenshots/mobile-dashboard.png) | ![Mobile Doctors](docs/screenshots/mobile-doctors.png) | ![Mobile Patients](docs/screenshots/mobile-patients.png) |
+| ![Mobile Login](public/screenshots/mobile-login.png) | ![Mobile Dashboard](public/screenshots/mobile-dashboard.png) | ![Mobile Doctors](public/screenshots/mobile-doctors.png) | ![Mobile Patients](public/screenshots/mobile-patients.png) |
