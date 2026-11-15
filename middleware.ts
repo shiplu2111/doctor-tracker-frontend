@@ -5,7 +5,8 @@ const PUBLIC_PATHS = ['/login'];
 
 export function middleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl;
-  const sessionCookie = request.cookies.get('dt_access');
+  const sessionCookie =
+    request.cookies.get('dt_session') || request.cookies.get('dt_access');
   const hasValidSession = Boolean(
     sessionCookie?.value && sessionCookie.value.trim().length > 0,
   );

@@ -21,10 +21,16 @@ export const useAuthStore = create<AuthState>((set) => ({
     set({ isLoading: true });
     try {
       const res = await apiClient<AuthenticatedUser>('/auth/me');
+      if (typeof document !== 'undefined') {
+        document.cookie = 'dt_session=1; path=/; max-age=604800; SameSite=Lax';
+      }
       set({ user: res.data, isLoading: false });
       return res.data;
     } catch {
       set({ user: null, isLoading: false });
+      if (typeof document !== 'undefined') {
+        document.cookie = 'dt_session=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0;';
+      }
       if (typeof window !== 'undefined' && !window.location.pathname.startsWith('/login')) {
         // eslint-disable-next-line @next/next/no-location-assign-relative-destination
         window.location.href = `/login?next=${encodeURIComponent(window.location.pathname + window.location.search)}`;
@@ -40,6 +46,9 @@ export const useAuthStore = create<AuthState>((set) => ({
         method: 'POST',
         body: JSON.stringify(credentials),
       });
+      if (typeof document !== 'undefined') {
+        document.cookie = 'dt_session=1; path=/; max-age=604800; SameSite=Lax';
+      }
       set({ user: res.data.user, isLoading: false });
       return res.data.user;
     } catch (error) {
@@ -56,7 +65,8 @@ export const useAuthStore = create<AuthState>((set) => ({
     } finally {
       set({ user: null, isLoading: false });
       if (typeof window !== 'undefined') {
-        // Clear document cookie explicitly
+        // Clear document cookies explicitly
+        document.cookie = 'dt_session=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0;';
         document.cookie = 'dt_access=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT; max-age=0;';
         // eslint-disable-next-line @next/next/no-location-assign-relative-destination
         window.location.href = '/login';
