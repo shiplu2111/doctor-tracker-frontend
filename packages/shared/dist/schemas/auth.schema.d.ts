@@ -1,0 +1,14 @@
+import { z } from 'zod';
+export declare const loginSchema: z.ZodObject<{
+    email: z.ZodString;
+    password: z.ZodString;
+}, "strip", z.ZodTypeAny, {
+    email: string;
+    password: string;
+}, {
+    email: string;
+    password: string;
+}>;
+export declare const passwordPolicySchema: z.ZodString;
+export type LoginInput = z.infer<typeof loginSchema>;
+//# sourceMappingURL=auth.schema.d.ts.map
